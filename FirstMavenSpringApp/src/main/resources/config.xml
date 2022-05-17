@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!-- 
+<bean id="objectname"  class="java class name with package">
+	<property  name="variable declared in java class"  value="val" />
+</bean>
+ -->
+
+<bean id="stdObj"  class="com.java.spack.Student">
+	<property name="rollno" value="101"/>
+	<property name="sname" value="Sahasra"/>
+	<property name="course" value="Java"/>
+	<property name="fees" value="15000.00"/>
+</bean>
+	
+	<!-- Constructor Dependency Bean -->
+	<bean id="empObj"  class="com.java.spack.Employee">
+		<constructor-arg name="empno"  value="1001"/>
+		<constructor-arg name="empname"  value="Praveen"/>
+		<constructor-arg name="job"  value="Tester"/>
+		<constructor-arg name="sal"  value="15000.00"/>
+	</bean>
+	
+</beans>
